@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class TextInput extends StatefulWidget {
@@ -11,11 +11,16 @@ class TextInput extends StatefulWidget {
 class _TextInputState extends State<TextInput> {
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    return TextField(
       keyboardType: TextInputType.multiline,
       maxLines: 5,
       maxLength: 50,
-      decoration: InputDecoration(labelText: "Name"),
+      decoration: const InputDecoration(labelText: "Name"),
+      onChanged: (String value) {
+        if (kDebugMode) {
+          print(value);
+        }
+      },
     );
   }
 }
