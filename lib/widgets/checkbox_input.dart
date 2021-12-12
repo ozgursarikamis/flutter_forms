@@ -8,8 +8,14 @@ class CheckboxInput extends StatefulWidget {
 }
 
 class _CheckboxInputState extends State<CheckboxInput> {
+
   @override
   Widget build(BuildContext context) {
-    return Checkbox(value: false, onChanged: (bool? value) { print(value); },);
+    return Column(
+      children: [
+        Checkbox(value: false, onChanged: (bool? value) { print(value); },),
+        Checkbox(value: false, onChanged: (bool? value) { print(value); },),
+      ],
+    );
   }
 }
