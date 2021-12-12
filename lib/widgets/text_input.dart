@@ -19,7 +19,14 @@ class _TextInputState extends State<TextInput> {
     textController.addListener(() {
       print("Current value is: ${textController.text}");
     });
-    // textController.dispose();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    // to prevent memory leaks:
+    textController.dispose();
   }
 
   @override
