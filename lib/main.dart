@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_forms/widgets/text_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,9 @@ class MyApp extends StatelessWidget {
             centerTitle: false,
             title: const Text('Flutter Forms Title'),
           ),
-          body: const Center(
-              child: Text(
-            'SAMPLE',
-            style: TextStyle(backgroundColor: Colors.white),
+          body: Center(
+              child: Column(
+                children: const <Widget>[TextInput()],
           )),
         ));
   }
