@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_forms/widgets/text_input.dart';
+import 'package:flutter_forms/widgets/checkbox_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,14 +15,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.amber),
         home: Scaffold(
-          appBar: AppBar(
-            centerTitle: false,
-            title: const Text('Flutter Forms Title'),
-          ),
-          body: Center(
-              child: Column(
-                children: const <Widget>[TextInput()],
-          )),
-        ));
+            appBar: AppBar(
+              centerTitle: false,
+              title: const Text('Flutter Forms Title'),
+            ),
+            body: const Center(
+              child: CheckboxInput(),
+            )));
   }
 }
