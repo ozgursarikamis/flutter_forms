@@ -15,7 +15,11 @@ class _TextInputState extends State<TextInput> {
   @override
   void initState() {
     super.initState();
-    textController.dispose();
+
+    textController.addListener(() {
+      print("Current value is: ${textController.text}");
+    });
+    // textController.dispose();
   }
 
   @override
@@ -25,11 +29,11 @@ class _TextInputState extends State<TextInput> {
       maxLines: 5,
       maxLength: 50,
       decoration: const InputDecoration(labelText: "Name"),
-      onChanged: (String value) {
-        if (kDebugMode) {
-          print(value);
-        }
-      },
+      // onChanged: (String value) {
+      //   if (kDebugMode) {
+      //     print(value);
+      //   }
+      // },
       controller: textController,
     );
   }
