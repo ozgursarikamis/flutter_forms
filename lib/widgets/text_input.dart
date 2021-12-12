@@ -9,6 +9,15 @@ class TextInput extends StatefulWidget {
 }
 
 class _TextInputState extends State<TextInput> {
+
+  final textController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    textController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -21,6 +30,7 @@ class _TextInputState extends State<TextInput> {
           print(value);
         }
       },
+      controller: textController,
     );
   }
 }
