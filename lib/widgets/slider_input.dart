@@ -18,6 +18,7 @@ class _SliderInputState extends State<SliderInput> {
         value: sliderValue,
         min: 0,
         max: 10,
+        divisions: 10,
         onChanged: (double value) {
           setState(() {
             sliderValue = value;
