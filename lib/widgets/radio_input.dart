@@ -9,29 +9,45 @@ class RadioInput extends StatefulWidget {
 
 class _RadioInputState extends State<RadioInput> {
 
+  String radioValue = "apples";
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        RadioListTile(
-          title: const Text('Apples'),
-          value: "apples",
-          onChanged: (value) { },
-          groupValue: "oranges",
-        ),
-        RadioListTile(
-          title: const Text('Oranges'),
-          value: "oranges",
-          onChanged: (value) { },
-          groupValue: "oranges",
-        ),
-        RadioListTile(
-          title: const Text('Peaches'),
-          value: "peaches",
-          onChanged: (value) { },
-          groupValue: "oranges",
-        ),
-      ],
+    return SizedBox(
+      child: Column(
+        children: [
+          RadioListTile(
+            title: const Text('Apples'),
+            value: "apples",
+            onChanged: (value) {
+              setState(() {
+                radioValue = value.toString();
+              });
+            },
+            groupValue: radioValue,
+          ),
+          RadioListTile(
+            title: const Text('Oranges'),
+            value: "oranges",
+            onChanged: (value) {
+              setState(() {
+                radioValue = value.toString();
+              });
+            },
+            groupValue: radioValue,
+          ),
+          RadioListTile(
+            title: const Text('Peaches'),
+            value: "peaches",
+            onChanged: (value) {
+              setState(() {
+                radioValue = value.toString();
+              });
+            },
+            groupValue: radioValue,
+          ),
+        ],
+      ),
     );
   }
 }

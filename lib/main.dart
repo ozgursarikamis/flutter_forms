@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_forms/widgets/radio_input.dart';
+import 'package:flutter_forms/widgets/switch_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
               centerTitle: false,
-              title: const Text('Flutter Forms Title'),
+              title: const Text('Flutter Forms'),
             ),
             body: const Center(
-              child: RadioInput(),
+              child: SwitchInput(),
             )));
   }
 }
