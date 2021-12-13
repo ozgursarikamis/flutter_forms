@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_forms/widgets/slider_input.dart';
+import 'package:flutter_forms/widgets/dropdown_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               title: const Text('Flutter Forms'),
             ),
             body: const Center(
-              child: SliderInput(),
+              child: DropDownInput(),
             )));
   }
 }
