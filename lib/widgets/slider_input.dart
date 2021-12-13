@@ -19,6 +19,7 @@ class _SliderInputState extends State<SliderInput> {
         min: 0,
         max: 10,
         divisions: 10,
+        label: sliderValue.toString(),
         onChanged: (double value) {
           setState(() {
             sliderValue = value;
