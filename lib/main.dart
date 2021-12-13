@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_forms/widgets/checkbox_input.dart';
+import 'package:flutter_forms/widgets/radio_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               title: const Text('Flutter Forms Title'),
             ),
             body: const Center(
-              child: CheckboxInput(),
+              child: RadioInput(),
             )));
   }
 }
