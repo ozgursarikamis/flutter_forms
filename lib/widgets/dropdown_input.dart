@@ -16,6 +16,7 @@ class _DropDownInputState extends State<DropDownInput> {
     return SizedBox(
       child: DropdownButton(
         value: dropdownValue,
+        icon: const Icon(Icons.arrow_downward),
         onChanged: (value) => {
           setState(() {
             dropdownValue = value.toString();
