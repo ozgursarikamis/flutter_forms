@@ -15,16 +15,24 @@ class _CheckboxInputState extends State<CheckboxInput> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Checkbox(value: checkBox1, onChanged: (bool? value) {
-          setState(() {
-            checkBox1 = !checkBox1;
-          });
-        },),
-        Checkbox(value: checkBox2, onChanged: (bool? value) {
-          setState(() {
-            checkBox2 = !checkBox2;
-          });
-        },),
+        CheckboxListTile(
+          title: const Text('Checkbox 1'),
+          value: checkBox1,
+          onChanged: (bool? value) {
+            setState(() {
+              checkBox1 = !checkBox1;
+            });
+          },
+        ),
+        CheckboxListTile(
+          title: const Text('Checkbox 2'),
+          value: checkBox2,
+          onChanged: (bool? value) {
+            setState(() {
+              checkBox2 = !checkBox2;
+            });
+          },
+        ),
       ],
     );
   }
