@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_forms/widgets/validating_form.dart';
+import 'package:flutter_forms/widgets/password_reset_form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
               centerTitle: false,
               title: const Text('Flutter Forms'),
             ),
-            body: const Center(
-              child: ValidatingForm(),
-            )));
+            body: const Padding(
+              padding: EdgeInsets.all(24.0),
+              child: PasswordResetForm(),
+            ) ));
   }
 }
